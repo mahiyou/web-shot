@@ -4,6 +4,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,9 +14,14 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { FooterComponent } from './components/footer/footer.component';
+import { DocsComponent } from './components/docs/docs.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 const appRoutes: Routes = [
-    { path: '', component: HomeComponent }
+    { path: '', component: HomeComponent },
+    { path: 'docs', component: DocsComponent },
+    { path: 'contact', component: ContactComponent },
+    { path: 'gallery', component: GalleryComponent }
 ]
 
 @NgModule({
@@ -25,6 +31,8 @@ const appRoutes: Routes = [
         HomeComponent,
         ContactComponent,
         FooterComponent,
+        DocsComponent,
+        GalleryComponent,
         
     ],
     imports: [
@@ -35,6 +43,7 @@ const appRoutes: Routes = [
         FormsModule,
         BrowserAnimationsModule,
         MatGridListModule,
+        MatTableModule,
         RouterModule.forRoot(appRoutes, { enableTracing: true })
     ],
     providers: [],

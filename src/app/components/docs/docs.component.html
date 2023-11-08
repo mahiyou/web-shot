@@ -1,0 +1,38 @@
+<div class="docs">
+    <div class="docs-title">مستندات رابط برنامه نویسی</div>
+    <div class="docs-sub-title">مثال آدرس اینترنتی</div>
+    <div class="docs-content">گزینه های اصلاح تصویر میتوانند به همراه آدرس وب سایت در آدرسی اینترنتی ارسال شوند. در زیر
+        لیستی کامل از گزینه ها را مشاهده می کنید:</div>
+    <div class="code-background">{{ docsCodeContent }}</div>
+    <button class="docs-btn">مشاهده تصویر وب سایت</button>
+
+    <div class="docs-title2">لیست کامل گزینه های اصلاح کننده تصویر</div>
+
+    <table mat-table [dataSource]="dataSource" class="docs-table" dir="rtl">
+        <ng-container matColumnDef="option">
+            <th mat-header-cell *matHeaderCellDef> گزینه </th>
+            <td mat-cell *matCellDef="let data"> {{data.option}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="type">
+            <th mat-header-cell *matHeaderCellDef> نوع </th>
+            <td mat-cell *matCellDef="let data"> {{data.type}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="required">
+            <th mat-header-cell *matHeaderCellDef> اجباری </th>
+            <td mat-cell *matCellDef="let data">
+                <mat-icon class="check-icon" *ngIf="data.required" fontIcon="check_circle"></mat-icon>
+                <mat-icon class="close-icon" *ngIf="!data.required" fontIcon="close"></mat-icon>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef> توضیحات </th>
+            <td mat-cell *matCellDef="let data"> {{data.description}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
