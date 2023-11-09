@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -44,7 +45,8 @@ const appRoutes: Routes = [
         BrowserAnimationsModule,
         MatGridListModule,
         MatTableModule,
-        RouterModule.forRoot(appRoutes, { enableTracing: true })
+        RouterModule.forRoot(appRoutes, { enableTracing: true }),
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]

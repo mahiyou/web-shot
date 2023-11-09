@@ -2,7 +2,8 @@
     text-align: center;
     background-color: #ecf0f1;
     border-top: 1px solid #dad9d9;
-    height: 350px;
+    min-height: 350px;
+    padding-bottom: 60px;
 
     .title {
         font-weight: 900;
@@ -44,9 +45,6 @@
     }
 
     .start-btn {
-        padding: 5px;
-        height: 40px;
-        width: 60px;
         background-color: #007bff;
         border: #007bff;
         border-radius: 5px;
@@ -54,6 +52,9 @@
         text-decoration: none;
         color: white;
         font-family: IRANSans;
+    }
+    .page-img{
+        margin: 20px 20px 30px 20px;
     }
 }
 
