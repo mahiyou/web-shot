@@ -69,8 +69,7 @@ const tableData: data[] = [{
 })
 
 export class DocsComponent {
-	docsCodeContent: string = 'http://web-shot.ir/capture?url=https://www.google.com/&width=800&crop=600';
 	displayedColumns: string[] = ['option', 'type', 'required', 'description'];
 	dataSource = tableData;
-
+	search: string = 'http://web-shot.ir/capture?url=https://www.google.com/&width=800&crop=600';
 }

@@ -20,23 +20,14 @@
         color: #7c848b;
     }
 
-    .code-background {
-        background-color: #ecf0f1;
-        border: 1px solid #dad9d9;
-        margin: 20px auto;
-        padding: 10px;
-        color: #7b8a8b;
-    }
-
     .docs-btn {
-        padding: 5px;
         height: 40px;
         background-color: #007bff;
-        border: #007bff;
         border-radius: 5px;
         padding: 10px;
+        text-decoration: none;
         color: white;
-        font-family: IRANSans;
+
     }
 
     .docs-title2 {
@@ -74,5 +65,17 @@
     .close-icon{
         color: #dc3545;
         font-weight: 900;
+    }
+    .input {
+        width: 60%;
+        height: 35px;
+        border-radius: 5px;
+        box-shadow: none;
+        border: 1px solid #007bff;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: #555b62;
+        font-size: 16px;
+        margin: 30px;
     }
 }
