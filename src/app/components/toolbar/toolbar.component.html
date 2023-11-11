@@ -1,6 +1,16 @@
 <mat-toolbar class="toolbar">
-	<a class="toolbar-title" routerLink="/">وب شات</a>
-	<a class="toolbar-link" routerLink="docs">مستندات</a>
-	<a class="toolbar-link" routerLink="gallery">گالری</a>
-	<a class="toolbar-link" routerLink="contact">تماس با ما</a>
+	<mat-toolbar-row>
+		<a class="toolbar-title" routerLink="/">وب شات</a>
+		<a class="toolbar-link hidden-in-small-screen" routerLink="docs">مستندات</a>
+		<a class="toolbar-link hidden-in-small-screen" routerLink="gallery">گالری</a>
+		<a class="toolbar-link hidden-in-small-screen" routerLink="contact">تماس با ما</a>
+		<mat-icon class="toolbar-icon hidden-in-big-screen" (click)="openNav()">menu</mat-icon>
+	</mat-toolbar-row>
+	<mat-toolbar-row *ngIf="open" class="nav">
+		<div>
+			<div><a class="toolbar-link" routerLink="docs">مستندات</a></div>
+			<div><a class="toolbar-link" routerLink="gallery">گالری</a></div>
+			<div><a class="toolbar-link" routerLink="contact">تماس با ما</a></div>
+		</div>
+	</mat-toolbar-row>
 </mat-toolbar>

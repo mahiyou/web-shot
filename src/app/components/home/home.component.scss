@@ -1,4 +1,6 @@
 .slider {
+    padding-left: 150px;
+    padding-right: 150px;
     text-align: center;
     background-color: #ecf0f1;
     border-top: 1px solid #dad9d9;
@@ -21,7 +23,7 @@
 
     .input {
         width: 35%;
-        height: 35px;
+        height: 32px;
         border-radius: 0px 5px 5px 0px;
         box-shadow: none;
         border: 1px solid #007bff;
@@ -31,11 +33,16 @@
         color: #555b62;
         font-size: 16px;
         margin-bottom: 40px;
+
+        &:focus-visible {
+            border: none;
+            box-shadow: none;
+        }
     }
 
     .btn {
         padding: 5px;
-        height: 39px;
+        height: 35px;
         background-color: #007bff;
         border: #007bff;
         border-radius: 5px 0px 0px 5px;
@@ -53,12 +60,23 @@
         color: white;
         font-family: IRANSans;
     }
-    .page-img{
+
+    .page-img {
         margin: 20px 20px 30px 20px;
+    }
+    @media(max-width:900px) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    @media(max-width:450px) {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
 .home-content {
+    padding-left: 150px;
+    padding-right: 150px;
     .title-of-content {
         margin-top: 60px;
         margin-bottom: 10px;
@@ -75,7 +93,8 @@
     .code-background {
         background-color: #ecf0f1;
         border: 1px solid #dad9d9;
-        margin: 20px 150px;
+        margin-top: 20px;
+        margin-bottom: 20px;
         padding: 10px;
         color: #7b8a8b;
     }
@@ -83,5 +102,13 @@
     .link {
         color: #007bff;
         text-decoration: none;
+    }
+    @media(max-width:900px) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    @media(max-width:450px) {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }

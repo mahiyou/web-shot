@@ -40,32 +40,37 @@
     .docs-table {
         background-color: #fafafa;
         margin-top: 60px;
-        th{
-           font-family: IRANSans; 
-           font-weight: 900;
-           font-size: 15px;
+        overflow-x: auto;
+
+        th {
+            font-family: IRANSans;
+            font-weight: 900;
+            font-size: 15px;
         }
-        td{
-            font-family: IRANSans; 
-            
+
+        td {
+            font-family: IRANSans;
+
         }
-        tr{
-            &:nth-child(2n){
+
+        tr {
+            &:nth-child(2n) {
                 background-color: #ededed;
             }
         }
-        
 
-        
     }
-    .check-icon{
+
+    .check-icon {
         color: #28a745;
-       
+
     }
-    .close-icon{
+
+    .close-icon {
         color: #dc3545;
         font-weight: 900;
     }
+
     .input {
         width: 60%;
         height: 35px;
@@ -77,5 +82,39 @@
         color: #555b62;
         font-size: 16px;
         margin: 30px;
+    }
+
+    @media(max-width:900px) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media(max-width:450px) {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .docs-table {
+            td {
+                padding: 5px;
+
+            }
+
+            tr,
+            th {
+                font-size: 13px;
+                padding-right: 0px;
+            }
+
+            .check-icon,
+            .close-icon {
+                font-size: 18px
+            }
+
+
+        }
+
+        .input {
+            width: 80%;
+        }
     }
 }

@@ -2,16 +2,18 @@
     <div class="title">ابزاری برای تصویر صفحات وب</div>
     <div class="subTitle">سریع، رایگان و بروز</div>
     <form (ngSubmit)="onSubmit(search)">
-        <input type="text" class="input" name="search" [(ngModel)]="search" dir="ltr"/>
-        <input type="submit" value="مشاهده ی صفحه" class="btn"/>
+        <input type="text" class="input" name="search" [(ngModel)]="search" dir="ltr" />
+        <input type="submit" value="مشاهده ی صفحه" class="btn" />
     </form>
-    <a *ngFor="let img of imgs | slice:0:4;" [href]="img.pageUrl"><img [src]="'http://web-shot.ir/capture?url='+img.imgUrl" width="250px" height="150px" class="page-img"></a>
+    <a *ngFor="let img of imgs | slice:0:4;" [href]="img.pageUrl"><img
+            [src]="'http://web-shot.ir/capture?url='+img.imgUrl" width="250px" height="150px" class="page-img"></a>
     <div><a href="/docs" class="start-btn">شروع!</a></div>
 </div>
 <div class="home-content">
     <div class="title-of-content">تهیه تصاویر به صورت مستقیم انجام میشود</div>
-    <div class="content">وب شات نمایش تصاویر زمان واقعی از وب سایت ها است. ما تنها تولید کننده ی عکس فوری وب سایت هستیم تا به محض اینکه شم آنها را درخواست می کنید تصاویر را در <br />
-    اختیارتان بگذاریم.با استفاده از رابط برنامه نویسی رایگان ما آن را امتحان کنید. </div>
+    <div class="content">وب شات نمایش تصاویر زمان واقعی از وب سایت ها است. ما تنها تولید کننده ی عکس فوری وب سایت
+        هستیم تا به محض اینکه شم آنها را درخواست می کنید تصاویر را در <br />
+        اختیارتان بگذاریم.با استفاده از رابط برنامه نویسی رایگان ما آن را امتحان کنید. </div>
 </div>
 <div class="home-content">
     <div class="title-of-content">همین حالا امتحان کنید!</div>
@@ -20,10 +22,12 @@
         {{codeText[0]}}
     </div>
     <div class="title-of-content">گزینه های پیشرفته</div>
-    <div class="content">گزینه های پیشرفته تر نیز وجود دارد، شما می توانید با تعیین عرض مشخصه تصویر را تغییر دهید و شما می توانید تعداد پیکسل های وب سایت اصلی که می خواهید برش دهید<br /> تعیین کنید. مثلا:</div>
+    <div class="content">گزینه های پیشرفته تر نیز وجود دارد، شما می توانید با تعیین عرض مشخصه تصویر را تغییر دهید و
+        شما می توانید تعداد پیکسل های وب سایت اصلی که می خواهید برش دهید<br /> تعیین کنید. مثلا:</div>
     <div class="code-background" dir="ltr">
         {{codeText[1]}}
     </div>
-    <div class="content">گرفتن عکسهای صفحه وب از یک مرورگر پیکسل 1200x1200 گرفته شده است. کد بالا، صفحه نمایش اصلی را به 100 پیکسل عرض می برد و سپس 600 پیکسل از تصویر را می برد.</div>
+    <div class="content">گرفتن عکسهای صفحه وب از یک مرورگر پیکسل 1200x1200 گرفته شده است. کد بالا، صفحه نمایش اصلی
+        را به 100 پیکسل عرض می برد و سپس 600 پیکسل از تصویر را می برد.</div>
     <a class="link" routerLink="docs">مشاهده لیست کلی گزینه ها</a>
 </div>

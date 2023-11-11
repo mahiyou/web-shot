@@ -1,12 +1,12 @@
-<mat-grid-list cols="12" rowHeight="200px" dir="rtl" class="contact">
-    <mat-grid-tile colspan="6">
+<mat-grid-list cols="12" rowHeight="200px" dir="rtl" class="contact" (window:resize)="onResize()">
+    <mat-grid-tile [colspan]="mybreakpoint">
         <div class="col">
             <div class="title">ارتباط با ما</div>
             اگر سوال و یا نظری دارید میتوانید با ایمیل support@web-shot.ir در ارتباط باشد.<br />
             به فاصله ی یک روز کاری پاسختان را خواهیم داد.
         </div>
     </mat-grid-tile>
-    <mat-grid-tile colspan="6">
+    <mat-grid-tile [colspan]="mybreakpoint">
         <div class="col">
             <div>راه های ارتباطی</div>
             <mat-grid-list cols="12" rowHeight="50px" dir="rtl">

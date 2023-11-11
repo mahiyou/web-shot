@@ -13,4 +13,8 @@
         margin-bottom: 15px;
         color: #707981;
     }
+    @media(max-width:450px) {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }

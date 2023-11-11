@@ -1,10 +1,10 @@
 <div class="footer">
     <div class="line"></div>
-    <mat-grid-list cols="12" rowHeight="150px" dir="rtl">
-        <mat-grid-tile colspan="6">
+    <mat-grid-list cols="12" rowHeight="150px" dir="rtl" (window:resize)="onResize()">
+        <mat-grid-tile [colspan]="mybreakpoint">
             <img src="../../../assets/pics/logo.png" />
         </mat-grid-tile>
-        <mat-grid-tile colspan="6">
+        <mat-grid-tile [colspan]="mybreakpoint">
             <a class="link" routerLink="docs">مستندات</a>
             <a class="link" routerLink="gallery">گالری</a>
             <a class="link" routerLink="contact">تماس با ما</a>
