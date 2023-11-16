@@ -20,13 +20,14 @@
     left: 0px;
     position: absolute;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .nav {
     height: 110px;
     line-height: 32px;
-    transition: ease-in;
-    transition-duration: 2s;
+    text-align: right;
+    transition: 2s ease-out;
 }
 
 .hidden-in-small-screen {
