@@ -1,12 +1,14 @@
 <div class="slider">
     <div class="title">ابزاری برای تصویر صفحات وب</div>
     <div class="subTitle">سریع، رایگان و بروز</div>
+    
     <form (ngSubmit)="onSubmit(search)">
         <input type="text" class="input" name="search" [(ngModel)]="search" dir="ltr" />
         <input type="submit" value="مشاهده ی صفحه" class="btn" />
     </form>
-    <a *ngFor="let img of imgs | slice:0:4;" [href]="img.pageUrl"><img
-            [src]="'http://web-shot.ir/capture?url='+img.imgUrl" width="250px" height="150px" class="page-img"></a>
+    <!-- <a [href]="pageUrl" *ngIf="imageToShow"><img [src]="imageToShow" width="250px" height="150px" class="page-img"/></a> -->
+    <a *ngFor="let img of imgs" [href]="img.webSiteUrl"><img
+            [src]="'http://localhost:3001/'+img.image" width="250px" height="150px" class="page-img"></a>
     <div><a href="/docs" class="start-btn">شروع!</a></div>
 </div>
 <div class="home-content">

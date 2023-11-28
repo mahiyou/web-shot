@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
-import {images, imgs} from '../../mocks-imgs'
+import { Image } from '../../interfaces/imgs'
+import { ImageService } from "../../services/images.service"
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent {
-  imgs: imgs[] = images;
+  imgs: Image[] = [];
+
+  constructor(private imagService:ImageService) {}
+  
+  ngOnInit() {
+		this.imagService.getImages('all').subscribe((items) => { this.imgs = items});
+	}
 }
