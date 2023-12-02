@@ -71,5 +71,5 @@ const tableData: data[] = [{
 export class DocsComponent {
 	displayedColumns: string[] = ['option', 'type', 'required', 'description'];
 	dataSource = tableData;
-	search: string = 'http://web-shot.ir/capture?url=https://www.google.com/&width=800&crop=600';
+	search: string = 'http://localhost:3001/capture?url=https://www.google.com/&width=800&crop=600';
 }

@@ -4,6 +4,6 @@
         نویسی ما تصاویری با کیفیت بالا را
         دریافت می کند و آنها را بر روی یک زیر ساخت شبکه نگهداری می کند تا در سریع ترین زمان آنها را تحویل دهد.</div>
     <a *ngFor="let img of imgs" [href]="img.webSiteUrl">
-        <img [src]="'http://web-shot.ir/capture?url='+img.image" width="250px" height="150px" class="page-img">
+        <img [src]="'http://localhost:3001/'+img.image" width="250px" height="150px" class="page-img">
     </a>
 </div>
