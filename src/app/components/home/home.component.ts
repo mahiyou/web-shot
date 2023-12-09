@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
 import { Image } from '../../interfaces/imgs'
-import { Observable } from "rxjs"
 import { ImageService } from 'src/app/services/images.service';
 
 @Component({
@@ -14,11 +12,12 @@ export class HomeComponent {
 	codeText: string[] = ['<img src="http://web-shot.ir/capture?url=https://www.google.com/">', '<img src="http://web-shot.ir/capture?url=https://www.google.com/&width=100&crop=600">'];
 	imgs: Image[] = [];
 	pageUrl: string = '';
-
+	loading: boolean = false;
+	
 	constructor(private imagService: ImageService) { }
 
 	ngOnInit() {
-		this.imagService.getImages('4').subscribe((items) => {
+		this.imagService.getImages('3').subscribe((items) => {
 			this.imgs = items
 			// console.log(items)
 			// console.log('shhh')
@@ -26,23 +25,24 @@ export class HomeComponent {
 	}
 
 	onSubmit(search: string) {
-		
+		this.loading = true;
 		if (search.indexOf('&') > -1) {
 			this.pageUrl = search.substring(0, search.indexOf('&'))
 		} else {
 			this.pageUrl = search
 		}
-		this.imagService.capture(this.pageUrl, { width: 20 }).subscribe((result) => {
+		this.imagService.capture(this.pageUrl, {}).subscribe((result) => {
+			console.log('gggg'+result)
 			this.createImageFromBlob(result)
-			this.ngOnInit();
 		})
 	}
-	imageToShow: any;
+	imagesToShow: any[] = [];
 
 	createImageFromBlob(image: Blob) {
 		let reader = new FileReader();
 		reader.addEventListener("load", () => {
-			this.imageToShow = reader.result;
+			this.imagesToShow.unshift(reader.result);
+			this.loading = false;
 		}, false);
 
 		if (image) {
